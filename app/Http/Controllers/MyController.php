@@ -11,6 +11,7 @@ use App\FoodPreference;
 use App\Desk;
 use App\Categorie;
 use App\ShoeSize;
+use Mail;
 
 class MyController extends Controller
 {
@@ -73,13 +74,8 @@ class MyController extends Controller
             } 
             $guest->save();
             $obj->desks_id = $guest->desks_id;
-        }
-    	return view('frontend.thankyou', ["obj" => $obj]);
-    }
 
-    public function guestsGet() {
-    	$guests = Guest::all();
-        $obj->$guests = $guests;
-    	return view('frontend.guests', ["obj" => $obj]);
+                        }
+    	   return view('frontend.thankyou', ["obj" => $obj]);
     }
 }

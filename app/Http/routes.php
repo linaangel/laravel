@@ -37,8 +37,6 @@ Route::get('rsvp/{category_id}', 'MyController@rsvpGet')->name('rsvpGet');
 Route::post('rsvp', 'MyController@rsvpPost')->name('rsvpPost');
 
 
-Route::get('guests', 'MyController@guestsGet')->name('guestsGet');
-
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 

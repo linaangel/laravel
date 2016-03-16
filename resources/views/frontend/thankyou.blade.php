@@ -14,28 +14,9 @@
         
 </head>
         <body>
-        <?php
-        $sendTo  = "matrimonio@sanmiguelangel.com";
-        $subject = "RSVP";
-
-        $headers = "From: " . $obj->full_name;
-        $headers .= "<" . $obj->email . ">\r\n";
-        $headers .= "Reply-To: " . $obj->email  . "\r\n";
-
-        $message = "Nombre: " . $obj->full_name . "\r\n";
-        $message .= "Correo: " . $obj->email . "\r\n";
-        $message .= "RSVP: " . $obj->rsvp . "\r\n";
-        $message .= "Categoría: " . $obj->categories_id . "\r\n";
-        $message .= "Mesa: " . $obj->desks_id . "\r\n";
-        $message .= "Talla Flip-Flop: " . $obj->shoe_sizes_id . "\r\n";
-        $message .= "Comida: " . $obj->food_preferences_id . "\r\n";
-
-        if (mail($sendTo, $subject, $message, $headers)) {
+    <?php
         $alerta="Gracias por confirmar!";
         echo "<script language='javascript' type='text/javascript'>alert('".$alerta."');window.location='http://sanmiguelangel.com';</script>";
-        } else {
-        echo "Error en el envío, por favor intenta otra vez!";
-        }
-         ?>
+    ?>
     </body>
 </html>
