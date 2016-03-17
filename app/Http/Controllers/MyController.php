@@ -48,6 +48,7 @@ class MyController extends Controller
             $guest->rsvp = $obj->rsvp;
             $guest->shoe_sizes_id = $obj->shoe_sizes_id;
             $guest->food_preferences_id = $obj->food_preferences_id;
+            $guest->categories_id = $obj->categories_id
             $desks = Desk::where('categories_id', $obj->categories_id);
             if (count($desks) > 0) {
                 $empty_desks = false;
