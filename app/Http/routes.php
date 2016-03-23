@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('rsvpGet');
 });
+Route::get('postJason', 'JsonController@JsonOutput');
 
 /*
 |--------------------------------------------------------------------------
